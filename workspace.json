@@ -529,6 +529,76 @@
           }
         }
       }
+    },
+    "ui-lib": {
+      "projectType": "library",
+      "generators": {
+        "@nxext/stencil:component": {
+          "style": "css",
+          "storybook": false
+        }
+      },
+      "root": "libs/ui-lib",
+      "sourceRoot": "libs/ui-lib/src",
+      "targets": {
+        "test": {
+          "executor": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/ui-lib/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "executor": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/ui-lib/stencil.config.ts"
+          }
+        },
+        "build": {
+          "executor": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/ui-lib/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "executor": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/ui-lib/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    },
+    "ui-lib-angular": {
+      "projectType": "library",
+      "root": "libs/ui-lib-angular",
+      "sourceRoot": "libs/ui-lib-angular/src",
+      "prefix": "xplat-demo",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-lib-angular/src/**/*.ts",
+              "libs/ui-lib-angular/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ui-lib-angular"
+          ],
+          "options": {
+            "jestConfig": "libs/ui-lib-angular/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

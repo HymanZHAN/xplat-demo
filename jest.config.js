@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/xplat/ionic/core',
     '<rootDir>/libs/xplat/ionic/features',
     '<rootDir>/libs/xplat/ionic/scss',
+    '<rootDir>/libs/ui-lib-angular',
   ],
 };

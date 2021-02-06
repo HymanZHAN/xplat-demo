@@ -28,7 +28,9 @@
       "@xplat-demo/xplat/ionic/core": ["libs/xplat/ionic/core/src/index.ts"],
       "@xplat-demo/xplat/ionic/features": [
         "libs/xplat/ionic/features/src/index.ts"
-      ]
+      ],
+      "@xplat-demo/ui-lib": ["libs/ui-lib/src/index.ts"],
+      "@xplat-demo/ui-lib-angular": ["libs/ui-lib-angular/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
