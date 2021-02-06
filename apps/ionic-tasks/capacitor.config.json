@@ -2,5 +2,6 @@
   "appId": "com.example.app",
   "appName": "tasks",
   "bundledWebRuntime": false,
-  "webDir": "www"
+  "webDir": "www",
+  "windowsAndroidStudioPath": "C:\\Users\\zhanx\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\201.6953283\\bin\\studio64.exe"
 }
