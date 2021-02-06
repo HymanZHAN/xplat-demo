@@ -1,0 +1,8 @@
+{
+  "name": "tasks",
+  "type": "angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "app_id": ""
+}
