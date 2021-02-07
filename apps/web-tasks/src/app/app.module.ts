@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 // libs
 import { environment } from '@xplat-demo/xplat/core';
@@ -13,5 +13,6 @@ import { AppComponent } from './app.component';
   imports: [CoreModule, SharedModule, AppRoutingModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

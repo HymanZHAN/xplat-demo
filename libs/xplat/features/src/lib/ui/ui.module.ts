@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { UI_PIPES } from './pipes';
 
-const MODULES = [TranslateModule];
+// stencil lib
+import { UiLibAngularModule } from '@xplat-demo/ui-lib-angular';
+
+const MODULES = [TranslateModule, UiLibAngularModule];
 
 @NgModule({
   imports: [...MODULES],
