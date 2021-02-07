@@ -535,7 +535,7 @@
       "generators": {
         "@nxext/stencil:component": {
           "style": "css",
-          "storybook": false
+          "storybook": true
         }
       },
       "root": "libs/ui-lib",
@@ -569,6 +569,36 @@
             "configPath": "libs/ui-lib/stencil.config.ts",
             "serve": true,
             "watch": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/html",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/ui-lib/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/html",
+            "outputPath": "dist/storybook/ui-lib",
+            "config": {
+              "configFolder": "libs/ui-lib/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
           }
         }
       }
