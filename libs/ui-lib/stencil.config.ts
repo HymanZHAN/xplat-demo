@@ -3,12 +3,17 @@ import {
   angularOutputTarget,
   ValueAccessorConfig,
 } from '@stencil/angular-output-target';
+import { postcss } from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import tailwindcss from 'tailwindcss';
 
 const angularValueAccessorBindings: ValueAccessorConfig[] = [];
 
 export const config: Config = {
   namespace: 'ui-lib',
   taskQueue: 'async',
+  globalStyle: './src/global/app.css',
   outputTargets: [
     {
       type: 'dist',
@@ -28,6 +33,11 @@ export const config: Config = {
       directivesProxyFile:
         '../../../libs/ui-lib-angular/src/generated/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
+    }),
+  ],
+  plugins: [
+    postcss({
+      plugins: [tailwindcss('tailwind.config.js'), autoprefixer(), cssnano()],
     }),
   ],
 };
